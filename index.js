@@ -9,6 +9,7 @@ const PORT = 80;
 const msg = io.connect('http://47.93.220.226')
 msg.on('connect', () => {
   console.log('connected to server')
+  msg.emit('register', 'iot')
 })
 msg.on('iot', (data) => {
   console.log(`recieve from iot, data: ${data}`)
