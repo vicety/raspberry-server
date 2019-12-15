@@ -2,7 +2,7 @@ const express = require('express');
 const requestBeginLogger = require('./src/middleware/loggingBeginMiddleware');
 const responseSentLogger = require('./src/middleware/loggingEndMiddleware');
 const io = require('socket.io-client')
-const setOut = require('./src/controller')
+const setOut = require('./src/controller').setOut
 
 const PORT = 80;
 
