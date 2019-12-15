@@ -16,7 +16,10 @@ msg.on('iot', (data) => {
 
 msg.on('video', (data) => {
   console.log(`recieve from video, data: ${data}`)
-  if(data.includes("开灯")) setOut(36, true)
+  if(data.includes("开灯")) {
+    console.log('here')
+    setOut(36, true)
+  } 
   if(data.includes("关灯")) setOut(36, false)
 })
 
